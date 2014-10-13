@@ -25,5 +25,14 @@ define( 'FRAMEWORK', get_template_directory() . '/framework' );
 
 require_once( FRAMEWORK . '/init.php' );
 
+/**
+ * ---------------------------------------------------------------------------------------------
+ * 3.0 - Set up the content width value based on the theme's design.
+ * ---------------------------------------------------------------------------------------------
+ */
+
+if ( ! isset( $content_width ) ) {
+	$content_width = 800;
+}
 
 ?>
