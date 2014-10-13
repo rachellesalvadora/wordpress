@@ -105,13 +105,19 @@ if ( ! function_exists( 'alpha_post_meta' ) ) {
 
 			// Get the post author.
 			printf(
-				'<li class="meta-author"><a href="%1$s" rel="author">%2$s</li>',
+				'<li class="meta-author"><a href="%1$s" rel="author">%2$s</a></li>',
 				esc_url(get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 				get_the_author()
 			);
 
 			// Get the date.
 			echo '<li class="meta-date"> '. get_the_date() . '</li>';
+
+			//The categories.
+			$category_list = get_the_category_list( ', ');
+			if ( $category_list ) {
+				echo '<li class="meta-categories"> '. $category_list . ' </li>';
+			}
 		}
 	}
 }
