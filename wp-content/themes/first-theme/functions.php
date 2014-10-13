@@ -95,7 +95,7 @@ if ( ! function_exists( 'manak_setup' ) ) {
 
 if ( ! function_exists( 'alpha_post_meta' ) ) {
 	function alpha_post_meta() {
-		echo '<ul class="lis-inline entry-meta">';
+		echo '<ul class="list-inline entry-meta">';
 
 		if ( get_post_type() === 'post' ) {
 			// If the post is sticky, mark it.
@@ -118,6 +118,13 @@ if ( ! function_exists( 'alpha_post_meta' ) ) {
 			if ( $category_list ) {
 				echo '<li class="meta-categories"> '. $category_list . ' </li>';
 			}
+
+			// The tags.
+			$tag_list = get_the_tag_list( '', ', ');
+			if ( $tag_list ) {
+				echo '<lis class="meta-tags"> ' . $tag_list . ' </li>';
+			}
+
 		}
 	}
 }
