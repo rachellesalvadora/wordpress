@@ -134,6 +134,14 @@ if ( ! function_exists( 'alpha_post_meta' ) ) {
 				echo '</li>';
 			endif;
 
+			// Edit link.
+			// Only be displayed if the used is logged in
+			if ( is_user_logged_in() ) {
+				echo '<li>';
+				edit_post_link( __( 'Edit', 'alpha' ), '<span class="meta-edit">', '</span>' );
+				echo '</li>';
+			}
+
 
 		}
 	}
