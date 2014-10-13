@@ -124,6 +124,16 @@ if ( ! function_exists( 'alpha_post_meta' ) ) {
 			if ( $tag_list ) {
 				echo '<lis class="meta-tags"> ' . $tag_list . ' </li>';
 			}
+			
+			// Comments link.
+			if ( comments_open() ) :
+				echo '<li>';
+				echo '<span class="meta-reply">';
+				comments_popup_link( __( 'Leave a comment', 'alpha' ), __( 'One Comment so far', 'alpha' ), __( 'View all % comments', 'alpha' ) );
+				echo '</span>';
+				echo '</li>';
+			endif;
+
 
 		}
 	}
