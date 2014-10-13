@@ -103,12 +103,15 @@ if ( ! function_exists( 'alpha_post_meta' ) ) {
 				echo '<li class="meta-featured-post"><i class="fa fa-thumb-tack"></i> ' . __( 'Sticky' , 'alpha' ) . '</li>';
 			}
 
-			// Get the post author
+			// Get the post author.
 			printf(
 				'<li class="meta-author"><a href="%1$s" rel="author">%2$s</li>',
 				esc_url(get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 				get_the_author()
 			);
+
+			// Get the date.
+			echo '<li class="meta-date"> '. get_the_date() . '</li>';
 		}
 	}
 }
