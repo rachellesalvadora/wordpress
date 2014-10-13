@@ -12,7 +12,7 @@
  * ---------------------------------------------------------------------------------------------
  */
 
-define( 'THEMEROOT', get_stylesheet_derectory_uri() );
+define( 'THEMEROOT', get_stylesheet_directory_uri() );
 define( 'IMAGES', THEMEROOT . '/images' );
 define( 'SCRIPTS', THEMEROOT . '/js' );
 define( 'FRAMEWORK', get_template_directory() . '/framework' );
@@ -78,7 +78,7 @@ if ( ! function_exists( 'manak_setup' ) ) {
 		 */
 		register_nav_menus(
 			array(
-				'main_menu' => --( 'Main Menu', 'alpha' )
+				'main_menu' => __( 'Main Menu', 'alpha' )
 			)
 		);
 

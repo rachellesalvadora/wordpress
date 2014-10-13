@@ -1,9 +1,11 @@
 <?php
+
 /**
  * index.php
  *
  * The main template file.
  */
+
 ?>
 
 <div class="main-content col-md-8" role="main">
