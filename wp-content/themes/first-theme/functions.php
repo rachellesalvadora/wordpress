@@ -87,4 +87,23 @@ if ( ! function_exists( 'manak_setup' ) ) {
 	add_action( 'after_theme_setup', 'manak_setup' );
 }
 
+/**
+ * ---------------------------------------------------------------------------------------------
+ * 5.0 - Display meta information for a specific post.
+ * ---------------------------------------------------------------------------------------------
+ */
+
+if ( ! function_exists( 'alpha_post_meta' ) ) {
+	function alpha_post_meta() {
+		echo '<ul class="lis-inline entry-meta">';
+
+		if ( get_post_type() === 'post' ) {
+			// If the post is sticky, mark it.
+			if ( is_sticky() ) {
+				echo '<li class="meta-featured-post"><i class="fa fa-thumb-tack"></i> ' . __( 'Sticky' , 'alpha' ) . '</li>';
+			}
+		}
+	}
+}
+
 ?>
