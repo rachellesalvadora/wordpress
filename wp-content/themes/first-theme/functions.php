@@ -17,5 +17,13 @@ define( 'IMAGES', THEMEROOT . '/images' );
 define( 'SCRIPTS', THEMEROOT . '/js' );
 define( 'FRAMEWORK', get_template_directory() . '/framework' );
 
+/**
+ * ---------------------------------------------------------------------------------------------
+ * 2.0 - Load the framework.
+ * ---------------------------------------------------------------------------------------------
+ */
+
+require_once( FRAMEWORK . '/init.php' );
+
 
 ?>
