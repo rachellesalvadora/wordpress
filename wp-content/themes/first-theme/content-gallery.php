@@ -1,9 +1,9 @@
 <?php
 
 /**
- * content.php
+ * content-gallery.php
  *
- * The default template for displaying post content.
+ * The default template for displaying post content with the Gallery format.
  */
 
 ?>
@@ -11,11 +11,17 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<!-- Article header -->
 		<header class="entry-header"> <?php
+
+/** we have no thumbnail. we just have the post meta.
+
+
 			// If the post has a thumbnail and it's not password protected
 			//then display the thumbnail
 			if ( has_post_thumbnail() && ! post_password_required() ) : ?>
 				<figure class="entry-thumbnail"><?php the_post_thumbnail(); ?> </figure>
-			<?php endif; 
+			<?php endif;
+
+*/ 
 
 			// If single page, display the title
 			// Else, we display the title in a link
@@ -38,14 +44,19 @@
 	<div class="entry-content">
 		<!-- display content -->
 		<?php
+/** we dont have any excerpt
 			if ( is_search() ) {
 				the_excerpt();
 			}
 			else {
+
+*/
 				the_content( __( 'Continue reading &rarr;', 'alpha' ) );
 			
 				wp_link_pages();
+/*
 			}
+*/
 		?>
 	</div> <!-- end entry-content -->
 
