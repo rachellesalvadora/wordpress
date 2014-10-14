@@ -32,7 +32,8 @@
 					alpha_post_meta();
 				?>
 			</p>
-		</header>
+		</header>  <!-- end entry header -->
+
 
 
 </article>

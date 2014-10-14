@@ -13,6 +13,9 @@
 		<?php get_template_part( 'content', get_post_format() ); ?>
 	<?php endwhile; ?>
 
+	<?php alpha_paging_nav(); ?>
+
+
 	<?php else : ?>
 		<php get_template_part( 'content', 'none' ); ?>
 	<?php endif; ?>
