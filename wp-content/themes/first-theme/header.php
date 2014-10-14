@@ -10,10 +10,10 @@
 
 <?php
 // Get the favicon
-	$favicon = IMAGE . '/icons/favicons.png';
+	$favicon = IMAGES . '/icons/favicons.png';
 
 //Get the custom touch icon
-	$touch-icon = IMAGES . '/icons/apple-touch-icon-152x152';
+	$touch_icon = IMAGES . '/icons/apple-touch-icon-152x152';
 ?>
 
 <!DOCTYPE html>
@@ -42,8 +42,17 @@
 	<?php wp_head(); ?>
 
 </head>
-<body>
+<body <?php body_class(); ?>>
 
-
-</body>
-</html>
+	<!-- HEADER -->
+	<header class="site-header" role="banner">
+		<div class="container header-contents">
+			<div class="row">
+				<div class="col-xs-3">
+					<dic class="site-logo">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">home</a>
+					</div> <!-- end site-logo -->
+				</div> <!-- end col-xs-3 -->
+			</div> <!-- end row -->
+		</div> <!-- end container -->
+	</header> <!-- end site-header -->
