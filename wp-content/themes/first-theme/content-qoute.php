@@ -5,7 +5,7 @@
  *
  * The default template for displaying posts with the Qoute post format.
  *
- *copy and paste from content-link since its pretty much similar
+ *copy and paste from content-link since its pretty much similar but with little edits
  */
 
 ?>
