@@ -147,4 +147,34 @@ if ( ! function_exists( 'alpha_post_meta' ) ) {
 	}
 }
 
+/**
+ * ---------------------------------------------------------------------------------------------
+ * 6.0 - Display navigation to the next/previous set of posts.
+ * ---------------------------------------------------------------------------------------------
+ */
+
+if ( ! function_exists( 'alpha_paging_nav') ) {
+	function alpha_paging_nav() { ?>
+		<ul>
+			<?php 
+				if ( get_previous_posts_link() ) : ?>
+				<li class="next">
+					<?php previous_posts_link( __( 'Newer Posts &rarr;', 'alpha' ) ) ?>
+
+				</li>
+				<?php endif;
+			?>
+
+			<?php 
+				if ( get_next_posts_link() ) : ?>
+				<li class="previous">
+					<?php nexts_posts_link( __( 'Older Posts &rarr;', 'alpha' ) ) ?>
+
+				</li>
+				<?php endif;
+			?>
+		</ul> <?php
+	}
+}
+
 ?>
