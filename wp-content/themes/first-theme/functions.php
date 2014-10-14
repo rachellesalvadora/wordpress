@@ -152,23 +152,30 @@ if ( ! function_exists( 'alpha_post_meta' ) ) {
  * 6.0 - Display navigation to the next/previous set of posts.
  * ---------------------------------------------------------------------------------------------
  */
-
+// Check if the function doesn't exist
 if ( ! function_exists( 'alpha_paging_nav') ) {
+	// then create it
 	function alpha_paging_nav() { ?>
 		<ul>
-			<?php 
+			<?php
+				// if we have previous post then list item
 				if ( get_previous_posts_link() ) : ?>
+
 				<li class="next">
-					<?php previous_posts_link( __( 'Newer Posts &rarr;', 'alpha' ) ) ?>
+					<?php
+					// this will make the title a link and the parameter
+					previous_posts_link( __( 'Newer Posts &rarr;', 'alpha' ) )
+					?>
 
 				</li>
 				<?php endif;
 			?>
 
 			<?php 
+			// then the next post link
 				if ( get_next_posts_link() ) : ?>
 				<li class="previous">
-					<?php nexts_posts_link( __( 'Older Posts &rarr;', 'alpha' ) ) ?>
+					<?php next_posts_link( __( 'Older Posts &rarr;', 'alpha' ) ) ?>
 
 				</li>
 				<?php endif;
