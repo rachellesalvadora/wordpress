@@ -52,7 +52,7 @@ if ( ! function_exists( 'manak_setup' ) ) {
 		/**
 		 * Add support for post formats.
 		 */
-		add_theme_supprt( 'post-formats', 
+		add_theme_support( 'post-formats', 
 			array(
 				'gallery',
 				'link',
@@ -84,7 +84,7 @@ if ( ! function_exists( 'manak_setup' ) ) {
 
 	}
 
-	add_action( 'after_theme_setup', 'manak_setup' );
+	add_action( 'after_setup_theme', 'manak_setup' );
 }
 
 /**

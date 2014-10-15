@@ -68,3 +68,10 @@
 			</div> <!-- end row -->
 		</div> <!-- end container -->
 	</header> <!-- end site-header -->
+
+	<!-- MAIN CONTENT AREA -->
+	<div class="container">
+		<div class="row">
+			
+		</div>
+	</div>
