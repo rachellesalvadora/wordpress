@@ -50,9 +50,21 @@
 			<div class="row">
 				<div class="col-xs-3">
 					<dic class="site-logo">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">home</a>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"></a>
 					</div> <!-- end site-logo -->
 				</div> <!-- end col-xs-3 -->
+				<div class="col-xs-9">
+					<nav classs="site-navigation" role="navigation">
+						<?php
+							wp_nav_menu(
+								array(
+									'theme_location' => 'main-menu',
+									'menu_class' => 'site-menu'
+								)
+							);
+						?>
+					</nav>
+				</div> <!-- end col-cs-9 -->
 			</div> <!-- end row -->
 		</div> <!-- end container -->
 	</header> <!-- end site-header -->
