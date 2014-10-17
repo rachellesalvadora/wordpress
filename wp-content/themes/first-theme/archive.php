@@ -1,3 +1,13 @@
+<?php
+
+/**
+ * archive.php
+ *
+ * The template for displaying author archive pages.
+ */
+
+?>
+
 <?php get_header(); ?>
 
 	<div class="main-content col-md-8" role="main">
