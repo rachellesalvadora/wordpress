@@ -27,3 +27,8 @@
 			</div> <!-- end copyright -->
 		</div> <!-- end container -->
 	</footer> <!-- end site-footer -->
+
+	<?php wp_footer(); ?>
+
+</body>
+</html>
