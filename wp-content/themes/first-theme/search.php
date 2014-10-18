@@ -3,7 +3,7 @@
 /**
  * search.php
  *
- * The template for displaying search pages.
+ * The template for displaying search results.
  */
 
 ?>
@@ -15,16 +15,10 @@
 			<header class="page-header">
 				<h1>
 					<?php 
-						printf( __( 'Category Archives for %s', 'alpha' ), single_cat_title( '', false ) );
+						printf( __( 'Search results for %s', 'alpha' ), get_search_query() );
 					?>
 				</h1>
 
-				<?php
-					// Show an optional category description.
-				if ( category_description() ) {
-					echo '<p>' . category_description() . '</p>';
-				}
-				?>
 			</header>
 
 			<?php while( have_posts() ) : the_post(); ?>
