@@ -28,6 +28,8 @@ class Alpha_Widget_Business_hours extends WP_Widget {
 				)
 			);
 	}
+
+
 }
 
 
